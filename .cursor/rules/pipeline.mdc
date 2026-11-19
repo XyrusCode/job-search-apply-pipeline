@@ -1,0 +1,14 @@
+---
+description: Canonical rules for the Job Search & Apply Pipeline
+globs:
+alwaysApply: true
+---
+
+Read `AGENTS.md` at the repository root before doing any work in this repo. It is the canonical spec for
+the search-to-apply pipeline and wins over any other instructions here.
+
+Tooling: Playwright MCP via `.mcp.json` for browser navigation and web-form applications (see
+`BROWSER-TOOLING.md`); web fetch/search for `feed` and `ats` sources; a configured Gmail/SMTP integration
+for email applications. Copy identity fields verbatim from `config/identity.json`, verify the resume
+attached before submitting, honor `PAUSE` and `dryRun`, and log every attempt to
+`data/applications.jsonl`.

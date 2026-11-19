@@ -1,0 +1,77 @@
+{
+  "_comment": "Copy to preferences.json and edit. dryRun ships true — the agent never submits or sends until you flip it. Runtime file is git-ignored.",
+  "dryRun": true,
+  "roles": [
+    "frontend",
+    "backend",
+    "fullstack",
+    "mobile"
+  ],
+  "optionalRoles": [
+    "devops"
+  ],
+  "remote": "worldwide",
+  "requireRemote": true,
+  "requireRemoteAppliesTo": "worldwide-sources-only",
+  "locationPolicy": {
+    "_comment": "Fill in your own home city/country. Remote is acceptable anywhere; onsite/hybrid only where you say.",
+    "homeCity": "",
+    "homeCountry": "",
+    "onsiteHybridAllowedIn": [],
+    "onsiteHybridAllowedElsewhere": false,
+    "remoteAllowed": true,
+    "remoteAnywhere": true,
+    "skipOnUnknownLocation": false,
+    "skipRule": "Describe your own eligibility rule here. When a posting is unclear, ask rather than guess."
+  },
+  "lookbackDays": 3,
+  "maxApplicationsPerDay": 3,
+  "dedupeCompanyDays": 30,
+  "minSalaryUsd": null,
+  "schedule": {
+    "cadence": "weekdays",
+    "time": "09:00"
+  },
+  "includeKeywords": [
+    "react",
+    "typescript",
+    "javascript",
+    "next.js",
+    "node",
+    "node.js",
+    "php",
+    "go",
+    "rust",
+    "tailwind",
+    "aws",
+    "serverless",
+    "api",
+    "full stack",
+    "fullstack",
+    "frontend",
+    "front-end",
+    "backend",
+    "back-end",
+    "mobile",
+    "react native",
+    "flutter"
+  ],
+  "excludeKeywords": [
+    "unpaid",
+    "internship",
+    "intern only",
+    "commission only"
+  ],
+  "excludeKeywordsWorldwideOnly": [
+    "clearance required",
+    "citizens only",
+    "must be located in",
+    "onsite only",
+    "on-site only",
+    "no remote",
+    "hybrid required"
+  ],
+  "excludeCompanies": [],
+  "excludeDomains": [],
+  "notes": "Example configuration. Set your own exclusions, location policy and daily cap before going live."
+}

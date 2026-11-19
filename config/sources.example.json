@@ -1,0 +1,108 @@
+{
+  "comment": "Copy to sources.json and edit. Ordered job sources. Reliability: feed/ats/html need no login; browser needs a browser tool and is best-effort. remoteFilter is per-source: 'worldwide' sources are dropped unless the role is remote-worldwide; 'any' sources (local boards) are kept regardless. locale describes where the jobs are based. Substitute {query} in searchUrlTemplate using roleSearchTerms below.",
+  "roleSearchTerms": {
+    "frontend": "frontend developer",
+    "backend": "backend developer",
+    "fullstack": "full stack developer",
+    "mobile": "mobile developer"
+  },
+  "sources": [
+    {
+      "name": "remotive",
+      "type": "feed",
+      "locale": "worldwide",
+      "remoteFilter": "worldwide",
+      "url": "https://remotive.com/api/remote-jobs?category=software-dev&limit=100",
+      "notes": "Public JSON API. Filter by title/keywords against configured roles."
+    },
+    {
+      "name": "remoteok",
+      "type": "feed",
+      "locale": "worldwide",
+      "remoteFilter": "worldwide",
+      "url": "https://remoteok.com/api",
+      "notes": "Public JSON. First array element is metadata; skip it."
+    },
+    {
+      "name": "weworkremotely-fullstack",
+      "type": "feed",
+      "locale": "worldwide",
+      "remoteFilter": "worldwide",
+      "url": "https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss"
+    },
+    {
+      "name": "weworkremotely-backend",
+      "type": "feed",
+      "locale": "worldwide",
+      "remoteFilter": "worldwide",
+      "url": "https://weworkremotely.com/categories/remote-back-end-programming-jobs.rss"
+    },
+    {
+      "name": "weworkremotely-frontend",
+      "type": "feed",
+      "locale": "worldwide",
+      "remoteFilter": "worldwide",
+      "url": "https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss"
+    },
+    {
+      "name": "greenhouse-boards",
+      "type": "ats",
+      "locale": "worldwide",
+      "remoteFilter": "worldwide",
+      "url": "https://boards-api.greenhouse.io/v1/boards/{company}/jobs",
+      "notes": "Use the JSON API for a discovered company's Greenhouse slug."
+    },
+    {
+      "name": "lever-boards",
+      "type": "ats",
+      "locale": "worldwide",
+      "remoteFilter": "worldwide",
+      "url": "https://api.lever.co/v0/postings/{company}?mode=json",
+      "notes": "Same idea for Lever-hosted listings."
+    },
+    {
+      "name": "example-local-board",
+      "type": "html",
+      "locale": "local",
+      "remoteFilter": "any",
+      "url": "https://www.example-local-board.com/jobs",
+      "searchUrlTemplate": "https://www.example-local-board.com/search?q={query}",
+      "listingLinkPattern": "/job/",
+      "notes": "Replace with a regional board relevant to you. Fetch the search page(s), then open each listing for the JD and application method."
+    },
+    {
+      "name": "example-browser-board",
+      "type": "browser",
+      "locale": "local",
+      "remoteFilter": "any",
+      "url": "https://www.example-browser-board.com/jobs",
+      "unverifiedSearchUrl": true,
+      "searchInstructions": "Use the site's search box for each role in roleSearchTerms, open each result for the JD and application method, and resolve category IDs at runtime.",
+      "notes": "Example JS-heavy local board; replace with your own. Needs a browser tool."
+    },
+    {
+      "name": "wellfound",
+      "type": "browser",
+      "locale": "worldwide",
+      "remoteFilter": "worldwide",
+      "url": "https://wellfound.com/jobs",
+      "notes": "Needs sign-in. Best-effort."
+    },
+    {
+      "name": "linkedin",
+      "type": "browser",
+      "locale": "worldwide",
+      "remoteFilter": "worldwide",
+      "url": "https://www.linkedin.com/jobs/search/?f_WT=2&keywords=developer",
+      "notes": "f_WT=2 = remote. Anti-bot; log 'blocked' if caught. Never solve a CAPTCHA."
+    },
+    {
+      "name": "indeed",
+      "type": "browser",
+      "locale": "worldwide",
+      "remoteFilter": "worldwide",
+      "url": "https://www.indeed.com/jobs?q=developer&remotejob=1",
+      "notes": "Heavy anti-bot; expect frequent 'blocked'."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "_comment": "Template. Copy to identity.json and fill with your own values. The agent copies these strings verbatim into forms/emails — never retyped from memory. identity.json is git-ignored.",
+  "firstName": "",
+  "lastName": "",
+  "fullName": "",
+  "email": "",
+  "phone": "",
+  "phoneDigitsOnly": "",
+  "country": "",
+  "countryCode": "",
+  "location": "",
+  "portfolio": "",
+  "github": "",
+  "linkedin": "",
+  "experienceYears": "",
+  "gender": "",
+  "workAuthorizationNote": "",
+  "howHeardDefault": ""
+}

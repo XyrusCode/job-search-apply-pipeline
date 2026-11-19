@@ -1,0 +1,37 @@
+# Secrets
+.env
+
+# Personal identity + runtime configuration (copy from the *.example.* files)
+config/identity.json
+config/preferences.json
+config/role-resume-map.json
+config/sources.json
+config/profile.md
+config/search-preferences.md
+
+# Personal documents
+resumes/*.pdf
+resumes/*.docx
+
+# Runtime state, logs, letters and screenshots — never commit
+data/*
+!data/.gitkeep
+state/
+output/*
+!output/cover-letters/
+!output/cover-letters/.gitkeep
+
+# Browser automation + stray run artifacts
+.playwright-mcp/
+*-before-submit.png
+*-confirmation.png
+
+# Telegram snapshot + session files (private channel content)
+data/telegram-feed.json
+state/telegram*.session
+
+# Kill switch is local state, not source
+PAUSE
+
+# Python
+__pycache__/

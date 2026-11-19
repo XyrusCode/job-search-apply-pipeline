@@ -1,0 +1,26 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md"],
+  "permission": {
+    "edit": "allow",
+    "webfetch": "allow",
+    "bash": {
+      "*": "ask",
+      "Get-Content*": "allow"
+    }
+  },
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "enabled": true,
+      "command": ["npx", "-y", "@playwright/mcp@latest"],
+      "comment": "Browser tool for browser/html sources and web-form applications. See BROWSER-TOOLING.md."
+    },
+    "gmail": {
+      "type": "local",
+      "enabled": true,
+      "command": ["npx", "-y", "@gongrzhe/server-gmail-autoauth-mcp"],
+      "comment": "Optional: authorize in an interactive session for email-based applications. Inert until configured."
+    }
+  }
+}

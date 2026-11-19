@@ -1,0 +1,6 @@
+# OpenAI Codex CLI reads the root AGENTS.md natively — that is the canonical spec.
+# This file only registers the portable browser tool. See BROWSER-TOOLING.md for alternatives.
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@latest"]

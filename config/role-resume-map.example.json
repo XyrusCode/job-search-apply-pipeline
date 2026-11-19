@@ -1,0 +1,45 @@
+{
+  "comment": "Copy to role-resume-map.json. Maps each role to a resume PDF in resumes/ and the themes to emphasize in the letter. Themes must be achievements the candidate can actually back up. If the file is absent, the pipeline skips that role and logs it.",
+  "roles": {
+    "frontend": {
+      "resume": "frontend-resume.pdf",
+      "emphasize": [
+        "UI work in your main frontend stack",
+        "component and design-system work",
+        "quality gates and CI for frontend code"
+      ]
+    },
+    "backend": {
+      "resume": "backend-resume.pdf",
+      "emphasize": [
+        "API and service design",
+        "data migration or performance work",
+        "security or multi-tenant fixes"
+      ]
+    },
+    "fullstack": {
+      "resume": "fullstack-resume.pdf",
+      "emphasize": [
+        "end-to-end feature delivery",
+        "CI/CD and deployment work",
+        "shared types or API contracts across services"
+      ]
+    },
+    "mobile": {
+      "resume": "mobile-resume.pdf",
+      "emphasize": [
+        "cross-platform app work",
+        "offline or local-first sync",
+        "release and distribution setup"
+      ]
+    },
+    "devops": {
+      "resume": "devops-resume.pdf",
+      "emphasize": [
+        "CI/CD pipeline design",
+        "backups and rollback",
+        "infrastructure and build automation"
+      ]
+    }
+  }
+}
